@@ -1,4 +1,11 @@
 <section>
   <h2><%= @instrument.instrument_type %></h2>
   <p><%= @instrument.manufacturer %> - <%= @instrument.brand %></p>
+
+  <%= link_to "Edit", edit_instrument_path(@instrument) %>
+
+  <%= form_tag instrument_path(@instrument), method: :delete do |f| %>
+    <%= submit_tag "KILL IT" %>
+  <% end %>
+
 </section>

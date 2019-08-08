@@ -1,0 +1,12 @@
+<%= form_for @instrument do |f| %>
+  <%= f.label :instrument_type, "Type" %>
+  <%= f.text_field :instrument_type %>
+
+  <%= f.label :manufacturer, "Manufacturer" %>
+  <%= f.text_field :manufacturer %>
+  
+  <%= f.label :brand, "Brand" %>
+  <%= f.text_field :brand %>
+
+  <%= f.submit "Update instrument" %>
+<% end %>

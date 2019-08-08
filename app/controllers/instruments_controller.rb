@@ -17,6 +17,22 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.new
   end
 
+  def destroy
+    @instrument = Instrument.find(params[:id])
+    @instrument.destroy
+    redirect_to instruments_path
+  end
+
+  def edit
+    @instrument = Instrument.find(params[:id])
+  end 
+
+  def update
+    @instrument = Instrument.find(params[:id])
+    @instrument.update(instrument_params)
+    redirect_to instrument_path(@instrument)
+  end
+
   private
 
   def instrument_params
